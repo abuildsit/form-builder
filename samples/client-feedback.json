@@ -1,0 +1,71 @@
+{
+  "id": "form_feedback_001",
+  "title": "Client Feedback Survey",
+  "description": "Quarterly satisfaction survey",
+  "fields": [
+    {
+      "id": "field_1",
+      "type": "text",
+      "label": "Client Name",
+      "required": true,
+      "linkedField": { "source": "client.name", "direction": "read" }
+    },
+    {
+      "id": "field_2",
+      "type": "radio",
+      "label": "Revenue Tier",
+      "options": [
+        { "label": "Small", "value": "Small" },
+        { "label": "Mid-Market", "value": "Mid-Market" },
+        { "label": "Enterprise", "value": "Enterprise" }
+      ],
+      "required": true,
+      "linkedField": { "source": "client.revenueTier", "direction": "read" }
+    },
+    {
+      "id": "field_3",
+      "type": "slider",
+      "label": "Overall Satisfaction",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "required": true
+    },
+    {
+      "id": "field_4",
+      "type": "multi-select",
+      "label": "Areas of Improvement",
+      "options": [
+        { "label": "Communication", "value": "communication" },
+        { "label": "Product Quality", "value": "product_quality" },
+        { "label": "Support Response", "value": "support_response" },
+        { "label": "Pricing", "value": "pricing" },
+        { "label": "Documentation", "value": "documentation" }
+      ],
+      "required": false
+    },
+    {
+      "id": "field_5",
+      "type": "richtext",
+      "label": "Additional Comments",
+      "placeholder": "Share your detailed feedback...",
+      "required": false
+    },
+    {
+      "id": "field_6",
+      "type": "file",
+      "label": "Supporting Documents",
+      "accept": ".pdf,.doc,.docx,.png,.jpg",
+      "required": false
+    },
+    {
+      "id": "field_7",
+      "type": "address",
+      "label": "Updated Office Address",
+      "required": false,
+      "linkedField": { "source": "client.address", "direction": "write" }
+    }
+  ],
+  "createdAt": "2026-03-12T00:00:00.000Z",
+  "updatedAt": "2026-03-12T00:00:00.000Z"
+}

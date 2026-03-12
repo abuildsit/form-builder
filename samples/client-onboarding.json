@@ -1,0 +1,299 @@
+{
+  "id": "form_onboarding_001",
+  "title": "Client Onboarding Form",
+  "description": "Collect initial client information during onboarding",
+  "fields": [
+    {
+      "id": "field_1",
+      "type": "header",
+      "label": "Client Intake Form",
+      "headingLevel": 1
+    },
+    {
+      "id": "field_2",
+      "type": "content",
+      "content": "Welcome! This intake form is designed to gather essential information about your organization so we can tailor our services to meet your needs. Please complete all required fields as accurately as possible. The information you provide will help us deliver a seamless onboarding experience."
+    },
+    {
+      "id": "field_3",
+      "type": "divider"
+    },
+    {
+      "id": "field_4",
+      "type": "header",
+      "label": "Client Information",
+      "headingLevel": 2
+    },
+    {
+      "id": "field_5",
+      "type": "text",
+      "label": "Client Name",
+      "placeholder": "Enter client name",
+      "required": true,
+      "width": "half",
+      "linkedField": { "source": "client.name", "direction": "read" }
+    },
+    {
+      "id": "field_6",
+      "type": "text",
+      "label": "Client Manager",
+      "placeholder": "Assigned account manager",
+      "required": true,
+      "width": "half",
+      "linkedField": { "source": "client.manager", "direction": "read" }
+    },
+    {
+      "id": "field_7",
+      "type": "email",
+      "label": "Email",
+      "placeholder": "email@example.com",
+      "required": true,
+      "width": "half",
+      "linkedField": { "source": "client.email", "direction": "read" }
+    },
+    {
+      "id": "field_8",
+      "type": "phone",
+      "label": "Phone",
+      "required": false,
+      "width": "half",
+      "linkedField": { "source": "client.phone", "direction": "write" }
+    },
+    {
+      "id": "field_9",
+      "type": "select",
+      "label": "Industry",
+      "required": true,
+      "width": "half",
+      "options": [
+        { "label": "Technology", "value": "technology" },
+        { "label": "Healthcare", "value": "healthcare" },
+        { "label": "Finance", "value": "finance" },
+        { "label": "Retail", "value": "retail" },
+        { "label": "Manufacturing", "value": "manufacturing" },
+        { "label": "Education", "value": "education" },
+        { "label": "Government", "value": "government" }
+      ],
+      "linkedField": { "source": "client.industry", "direction": "write" }
+    },
+    {
+      "id": "field_10",
+      "type": "radio",
+      "label": "Revenue Tier",
+      "required": true,
+      "width": "half",
+      "options": [
+        { "label": "Small", "value": "small" },
+        { "label": "Mid-Market", "value": "mid-market" },
+        { "label": "Enterprise", "value": "enterprise" }
+      ],
+      "linkedField": { "source": "client.revenueTier", "direction": "read" }
+    },
+    {
+      "id": "field_11",
+      "type": "divider"
+    },
+    {
+      "id": "field_12",
+      "type": "header",
+      "label": "Contract Details",
+      "headingLevel": 2
+    },
+    {
+      "id": "field_13",
+      "type": "date",
+      "label": "Contract Start Date",
+      "required": true,
+      "width": "half",
+      "linkedField": { "source": "client.contractStartDate", "direction": "read" }
+    },
+    {
+      "id": "field_14",
+      "type": "select",
+      "label": "Contract Duration",
+      "required": true,
+      "width": "half",
+      "options": [
+        { "label": "6 Months", "value": "6_months" },
+        { "label": "1 Year", "value": "1_year" },
+        { "label": "2 Years", "value": "2_years" },
+        { "label": "3 Years", "value": "3_years" }
+      ]
+    },
+    {
+      "id": "field_15",
+      "type": "number",
+      "label": "Estimated Annual Value",
+      "placeholder": "Enter amount in USD",
+      "required": false,
+      "width": "half"
+    },
+    {
+      "id": "field_16",
+      "type": "select",
+      "label": "Payment Terms",
+      "required": true,
+      "width": "half",
+      "options": [
+        { "label": "Net 15", "value": "net_15" },
+        { "label": "Net 30", "value": "net_30" },
+        { "label": "Net 60", "value": "net_60" },
+        { "label": "Net 90", "value": "net_90" }
+      ]
+    },
+    {
+      "id": "field_17",
+      "type": "divider"
+    },
+    {
+      "id": "field_18",
+      "type": "header",
+      "label": "Office Address",
+      "headingLevel": 2
+    },
+    {
+      "id": "field_19",
+      "type": "content",
+      "content": "Please confirm or update the client's office address below."
+    },
+    {
+      "id": "field_20",
+      "type": "address",
+      "label": "Address",
+      "required": true,
+      "width": "full",
+      "linkedField": { "source": "client.address", "direction": "write" }
+    },
+    {
+      "id": "field_21",
+      "type": "divider"
+    },
+    {
+      "id": "field_22",
+      "type": "header",
+      "label": "Service Requirements",
+      "headingLevel": 2
+    },
+    {
+      "id": "field_23",
+      "type": "multi-select",
+      "label": "Services Required",
+      "required": true,
+      "width": "full",
+      "options": [
+        { "label": "Consulting", "value": "consulting" },
+        { "label": "Implementation", "value": "implementation" },
+        { "label": "Training", "value": "training" },
+        { "label": "Support", "value": "support" },
+        { "label": "Custom Development", "value": "custom_development" },
+        { "label": "Data Migration", "value": "data_migration" }
+      ]
+    },
+    {
+      "id": "field_24",
+      "type": "slider",
+      "label": "Priority Level",
+      "required": false,
+      "width": "half",
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "id": "field_25",
+      "type": "select",
+      "label": "Project Timeline",
+      "required": true,
+      "width": "half",
+      "options": [
+        { "label": "Immediate", "value": "immediate" },
+        { "label": "1-3 Months", "value": "1_3_months" },
+        { "label": "3-6 Months", "value": "3_6_months" },
+        { "label": "6-12 Months", "value": "6_12_months" }
+      ]
+    },
+    {
+      "id": "field_26",
+      "type": "textarea",
+      "label": "Special Requirements",
+      "placeholder": "Describe any special requirements, constraints, or additional context",
+      "required": false,
+      "width": "full"
+    },
+    {
+      "id": "field_27",
+      "type": "divider"
+    },
+    {
+      "id": "field_28",
+      "type": "header",
+      "label": "Assessment",
+      "headingLevel": 2
+    },
+    {
+      "id": "field_29",
+      "type": "rating",
+      "label": "Initial Satisfaction Rating",
+      "required": false,
+      "width": "half",
+      "maxRating": 5
+    },
+    {
+      "id": "field_30",
+      "type": "rating",
+      "label": "Likelihood to Recommend",
+      "required": false,
+      "width": "half",
+      "maxRating": 10
+    },
+    {
+      "id": "field_31",
+      "type": "content",
+      "content": "Please upload any relevant documents such as contracts, proposals, or requirements specifications."
+    },
+    {
+      "id": "field_32",
+      "type": "file",
+      "label": "Supporting Documents",
+      "required": false,
+      "width": "full",
+      "accept": ".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg"
+    },
+    {
+      "id": "field_33",
+      "type": "divider"
+    },
+    {
+      "id": "field_34",
+      "type": "header",
+      "label": "Authorization",
+      "headingLevel": 2
+    },
+    {
+      "id": "field_35",
+      "type": "content",
+      "content": "By signing below, you confirm that all information provided is accurate."
+    },
+    {
+      "id": "field_36",
+      "type": "checkbox",
+      "label": "Terms & Conditions",
+      "required": true,
+      "width": "full",
+      "options": [
+        { "label": "I agree to the Terms of Service", "value": "terms_of_service" },
+        { "label": "I agree to the Privacy Policy", "value": "privacy_policy" },
+        { "label": "I consent to data processing", "value": "data_processing" }
+      ]
+    },
+    {
+      "id": "field_37",
+      "type": "signature",
+      "label": "Authorized Signature",
+      "required": true,
+      "width": "full"
+    }
+  ],
+  "createdAt": "2026-03-12T00:00:00.000Z",
+  "updatedAt": "2026-03-12T00:00:00.000Z"
+}

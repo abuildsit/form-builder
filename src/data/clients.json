@@ -1,0 +1,87 @@
+[
+  {
+    "id": "client_001",
+    "name": "Acme Corporation",
+    "email": "contact@acmecorp.com",
+    "phone": "+1 (555) 123-4567",
+    "manager": "Sarah Chen",
+    "industry": "technology",
+    "revenueTier": "Enterprise",
+    "address": {
+      "street": "100 Innovation Drive",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94105",
+      "country": "US"
+    },
+    "contractStartDate": "2024-01-15"
+  },
+  {
+    "id": "client_002",
+    "name": "Greenleaf Health",
+    "email": "info@greenleafhealth.com",
+    "phone": "+1 (555) 234-5678",
+    "manager": "Marcus Johnson",
+    "industry": "healthcare",
+    "revenueTier": "Mid-Market",
+    "address": {
+      "street": "42 Wellness Blvd",
+      "city": "Boston",
+      "state": "MA",
+      "zip": "02101",
+      "country": "US"
+    },
+    "contractStartDate": "2024-06-01"
+  },
+  {
+    "id": "client_003",
+    "name": "Sterling Financial Group",
+    "email": "hello@sterlingfg.com",
+    "phone": "+1 (555) 345-6789",
+    "manager": "Priya Patel",
+    "industry": "finance",
+    "revenueTier": "Enterprise",
+    "address": {
+      "street": "200 Wall Street",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10005",
+      "country": "US"
+    },
+    "contractStartDate": "2023-09-10"
+  },
+  {
+    "id": "client_004",
+    "name": "Bright Retail Co",
+    "email": "support@brightretail.com",
+    "phone": "+1 (555) 456-7890",
+    "manager": "Sarah Chen",
+    "industry": "retail",
+    "revenueTier": "Small",
+    "address": {
+      "street": "88 Commerce Lane",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "73301",
+      "country": "US"
+    },
+    "contractStartDate": "2025-02-20"
+  },
+  {
+    "id": "client_005",
+    "name": "Titan Manufacturing",
+    "email": "ops@titanmfg.com",
+    "phone": "+1 (555) 567-8901",
+    "manager": "Marcus Johnson",
+    "industry": "manufacturing",
+    "revenueTier": "Mid-Market",
+    "address": {
+      "street": "500 Industrial Pkwy",
+      "city": "Detroit",
+      "state": "MI",
+      "zip": "48201",
+      "country": "US"
+    },
+    "contractStartDate": "2024-11-05"
+  }
+]
