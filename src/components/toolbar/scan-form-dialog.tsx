@@ -20,10 +20,13 @@ interface ScanFormDialogProps {
 
 async function pdfToImages(file: File): Promise<string[]> {
   const pdfjsLib = await import("pdfjs-dist");
-  pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
+    "pdfjs-dist/build/pdf.worker.min.mjs",
+    import.meta.url
+  ).toString();
 
   const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+  const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
   const images: string[] = [];
 
   for (let i = 1; i <= pdf.numPages; i++) {
@@ -70,9 +73,12 @@ export function ScanFormDialog({ open, onOpenChange }: ScanFormDialogProps) {
         setPreviews(images);
         setPageCount(images.length);
         setStatus("idle");
-      } catch {
+      } catch (err) {
+        console.error("PDF conversion error:", err);
         setStatus("error");
-        setErrorMessage("Failed to convert PDF. The file may be corrupted or password-protected.");
+        setErrorMessage(
+          `Failed to convert PDF: ${err instanceof Error ? err.message : "Unknown error"}. Check browser console for details.`
+        );
         setPreviews([]);
       }
     } else {
