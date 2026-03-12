@@ -1,0 +1,68 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(gh pr:*)",
+      "Bash(find:*)",
+      "Bash(gh issue list:*)",
+      "Bash(ls:*)",
+      "Bash(cd:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(rg:*)",
+      "Bash(git remote add:*)",
+      "Bash(gh api:*)",
+      "Bash(node:*)",
+      "Bash(grep:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker exec:*)",
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(curl:*)",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python3 -m pytest tests/ -v)",
+      "Bash(pytest:*)",
+      "Bash(python:*)",
+      "Bash(git tag:*)",
+      "Bash(gh issue view:*)",
+      "mcp__puppeteer__puppeteer_navigate",
+      "mcp__puppeteer__puppeteer_screenshot",
+      "mcp__puppeteer__puppeteer_click",
+      "mcp__puppeteer__puppeteer_fill",
+      "mcp__puppeteer__puppeteer_evaluate",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": []
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "enabledMcpjsonServers": [
+    "puppeteer"
+  ],
+  "enableAllProjectMcpServers": true,
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "paplay /usr/share/sounds/sound-icons/prompt.wav"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "paplay /usr/share/sounds/sound-icons/prompt.wav"
+          }
+        ]
+      }
+    ]
+  }
+}
